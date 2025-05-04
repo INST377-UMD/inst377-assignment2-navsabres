@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stocks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body onload="loadRedditData()">
+    <script src="script.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <h1 class="text-center">INST377 - Assignment</h1>
+    <div class="navigation">
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="stocks.html">Stocks</a>
+        <a href="dogs.html">Dogs</a>
+      </nav>
+    </div>
+    
+    <h1 class="text-center">Stock Market Data</h1>
+    
+    <div class="form-container">
+      <form onsubmit="return false;">
+        <input type="text" minlength="1" maxlength="5" required pattern="[A-Za-z]*" id="stockSymbol" placeholder="Enter stock symbol (e.g., AAPL)"/>
+        <select id="timeRange">
+          <option value="30">30 Days</option>
+          <option value="60">60 Days</option>
+          <option value="90">90 Days</option>
+        </select>
+        <br />
+        <button class="custom-button" onclick="fetchStockData()">Get Stock Data</button>
+      </form>
+    </div>
+    
+    <div class="chart-container">
+      <canvas id="stockChart"></canvas>
+    </div>
+    
+    <div id="stockDataOutput" class="flex-center"></div>
+    
+    <div class="flex-center">
+      <div class="info-box">
+        <div>
+          <h2>Voice Navigation Features</h2>
+          <p>Enable your microphone to use voice commands</p>
+          <ul>
+            <li>Look up stock data</li>
+            <ul>
+              <li>Say: <b>"Look up [stock symbol]"</b></li>
+            </ul>
+            <li>Navigate to different pages</li>
+            <ul>
+              <li>Say: <b>"Navigate to [page name]"</b></li>
+            </ul>
+            <li>Change the page background color</li>
+            <ul>
+              <li>Say: <b>"Change color to [color name]"</b></li>
+            </ul>
+            <li>Get a greeting</li>
+            <ul>
+              <li>Say: <b>"Hello"</b></li>
+            </ul>
+          </ul>
+          <div class="button-container">
+            <button class="custom-button" onclick="enableStockVoiceCommands()">
+              Enable Voice Commands
+            </button>
+            <button class="custom-button" onclick="disableVoiceCommands()">
+              Disable Voice Commands
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

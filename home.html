@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body onload="loadRandomQuote()">
+    <script src="script.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+    <h1 class="text-center">INST377 - Assignment</h1>
+
+    <div class="navigation">
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="stocks.html">Stocks</a>
+        <a href="dogs.html">Dogs</a>
+      </nav>
+    </div>
+
+    <h1 class="text-center">Welcome to our interactive web application!</h1>
+
+    <div class="button-container">
+      <button class="custom-button" onclick="navigateToStocks()">
+        Stocks
+      </button>
+      <button class="custom-button" onclick="navigateToDogs()">
+        Dogs
+      </button>
+    </div>
+    
+    <div class="flex-center">
+      <div class="quote-container">
+        <div class="text-center">
+          <h2>Quote of the Day</h2>
+          <p id="quoteText"></p>
+          <p id="quoteAuthor"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-center">
+      <div class="info-box">
+        <div>
+          <h2>Voice Navigation Features</h2>
+          <p>Enable your microphone to use voice commands</p>
+          <ul>
+            <li>Navigate to different pages</li>
+            <ul>
+              <li>Say: <b>"Navigate to [page name]"</b></li>
+            </ul>
+            <li>Change the page background color</li>
+            <ul>
+              <li>Say: <b>"Change color to [color name]"</b></li>
+            </ul>
+            <li>Get a greeting</li>
+            <ul>
+              <li>Say: <b>"Hello"</b></li>
+            </ul>
+          </ul>
+          <div class="button-container">
+            <button class="custom-button" onclick="enableVoiceCommands()">
+              Enable Voice Commands
+            </button>
+            <button class="custom-button" onclick="disableVoiceCommands()">
+              Disable Voice Commands
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

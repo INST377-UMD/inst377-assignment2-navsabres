@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dogs</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body onload="loadDogImages()">
+    <script src="script.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+
+    <h1 class="text-center">INST377 - Assignment</h1>
+
+    <div class="navigation">
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="stocks.html">Stocks</a>
+        <a href="dogs.html">Dogs</a>
+      </nav>
+    </div>
+
+    <h1 class="text-center">Dog Gallery & Breed Information</h1>
+
+    <div id="dogImageSlider" class="dog-slider" data-simple-slider></div>
+    
+    <div id="dogButtons"></div>
+
+    <div id="breedInfo"></div>
+
+    <div class="flex-center">
+      <div class="info-box">
+        <div>
+          <h2>Voice Navigation Features</h2>
+          <p>Enable your microphone to use voice commands</p>
+          <ul>
+            <li>Look up dog breed information</li>
+            <ul>
+              <li>Say: <b>"Look up breed [breed name]"</b></li>
+            </ul>
+            <li>Navigate to different pages</li>
+            <ul>
+              <li>Say: <b>"Navigate to [page name]"</b></li>
+            </ul>
+            <li>Change the page background color</li>
+            <ul>
+              <li>Say: <b>"Change color to [color name]"</b></li>
+            </ul>
+            <li>Get a greeting</li>
+            <ul>
+              <li>Say: <b>"Hello"</b></li>
+            </ul>
+          </ul>
+          <div class="button-container">
+            <button class="custom-button" onclick="enableDogVoiceCommands()">
+              Enable Voice Commands
+            </button>
+            <button class="custom-button" onclick="disableVoiceCommands()">
+              Disable Voice Commands
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
